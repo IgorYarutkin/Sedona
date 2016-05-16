@@ -7,7 +7,7 @@
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet'>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="other/developer.css" rel="stylesheet">
+  <!-- <link href="other/developer.css" rel="stylesheet"> -->
   <!-- Временная стилевая разметка -->
 </head>
 
@@ -16,11 +16,11 @@
     <header class="header-index">
       <nav class="navigation-main">
         <ul class="menu-main">
-          <li class="menu-main-item"><a href="">Информация</a></li>
-          <li class="menu-main-item"><a href="">Фото и видео</a></li>
+          <li class="menu-main-item"><a href="information.html">Информация</a></li>
+          <li class="menu-main-item"><a href="photo.html">Фото и видео</a></li>
           <li class="menu-main-item"></li>
-          <li class="menu-main-item"><a href="">Карта штата</a></li>
-          <li class="menu-main-item"><a href="">Гостиницы</a></li>
+          <li class="menu-main-item"><a href="map.html">Карта штата</a></li>
+          <li class="menu-main-item"><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -92,23 +92,16 @@
           <div class="search-form-header">Поиск гостиницы в Седоне</div>
           <form action="https://echo.htmlacademy.ru" method="post">
             <div class="search-fields-wrapper">
-            <label class="date-in">Дата заезда:
-              <input class="icon-calendar" type="date" name="date-in" reguired></label>
-              </div>
-            <div class="search-fields-wrapper">
-            <label class="date-out">Дата выезда:
-              <input class="icon-calendar" type="date" name="date-out" reguired>
-            </label>
+              <label class="date-in" for="date-in">Дата заезда:</label>
+              <input id="date-in" class="icon-calendar" type="date" name="date-in" value="24 апреля 2016" reguired>
+              <label class="date-out" for="date-out">Дата выезда:</label>
+              <input id="date-out" class="icon-calendar" type="date" name="date-out" value="4 июля 2016" reguired>
+              <label class="adults" for="adults">Взрослые:</label>
+              <input id="adults" type="number" name="adults" min="1" value="1" reguired>
+              <label class="kids" for="kids">Дети:</label>
+              <input id="kids" type="number" name="kids" min="0" value="0" reguired>
+              <a class="search-form-button" href="search.html">Найти</a>
             </div>
-            <div class="search-fields-wrapper">
-            <label class="adults">Взрослые
-              <input type="number" name="adults" min="1" value="1" reguired>
-            </label>
-            <label class="kids">Взрослые
-              <input type="number" name="kids" min="0" value="0" reguired>
-            </label>
-          </div>
-            <a class="search-form-button" href="#">Найти</a>
           </form>
         </div>
       </div>
@@ -117,13 +110,14 @@
     <footer class="footer-index">
       <div class="hashtag">#visitsedona</div>
       <div class="social-icons">
-        <div class="social-icons icon-twitter">Twitter</div>
-        <div class="social-icons icon-facebook">Facebook</div>
-        <div class="social-icons icon-youtube">Youtube</div>
+        <a class="social-icon icon-twitter" href="#"></a>
+        <a class="social-icon icon-facebook" href="#"></a>
+        <a class="social-icon icon-youtube" href="#"></a>
       </div>
       <div class="copyright">Website by</div>
     </footer>
   </div>
+
 </body>
 
 </html>
