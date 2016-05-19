@@ -13,7 +13,7 @@ body {
   max-width: 1200px;
 }
 .header-index {
-  height: 56px;
+  min-height: 56px;
 }
 .navigation-main {
   height: 100%;
@@ -94,7 +94,7 @@ body {
 .whole-page-container {
   padding-top: 63px;
   width: 100%;
-  height: 216px;
+  min-height: 216px;
   background-color: #fff;
 }
 .h1-index {
@@ -120,7 +120,7 @@ body {
 }
 .reason-blue {
   padding-top: 51px;
-  height: 256px;
+  min-height: 256px;
   color: #fff;
   background-color: #81b3d2;
 }
@@ -142,7 +142,7 @@ h3.reason-header {
 .reason-white {
   position: relative;
   padding-top: 164px;
-  height: 327px;
+  min-height: 327px;
   background-color: #fff;
 }
 .reason-white::before {
@@ -168,7 +168,7 @@ h3.reason-header {
 }
 .reason-grey {
   padding-top: 47px;
-  height: 253px;
+  min-height: 253px;
   background-color: #eee;
 }
 .reason-grey .reason-header {
@@ -190,7 +190,7 @@ h3.reason-header {
 .whole-page-container-two {
   position: relative;
   padding-top: 55px;
-  height: 290px;
+  min-height: 290px;
 }
 h4.booking {
   margin: 0px;
@@ -220,15 +220,8 @@ h4.booking {
   background-color: #766357;
 }
 .search-fields-wrapper {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
+  position: relative;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 53px 56px 0px;
 }
@@ -237,6 +230,7 @@ h4.booking {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 110px;
+  line-height: 36px;
 }
 .kids {
   padding-left: 20px;
@@ -248,10 +242,7 @@ h4.booking {
   background-color: #f2f2f2;
   border: none;
 }
-.search-fields-wrapper label {
-  line-height: 36px;
-}
-input[type="date"] {
+.search-fields-wrapper input[type="date"] {
   margin-bottom: 30px;
   padding-left: 15px;
   width: 344px;
@@ -260,7 +251,7 @@ input[type="date"] {
   font-size: 14px;
   color: #000;
 }
-input[type="number"] {
+.search-fields-wrapper input[type="number"] {
   margin-bottom: 54px;
   width: 112px;
   height: 36px;
@@ -268,6 +259,43 @@ input[type="number"] {
   font-size: 14px;
   color: #000;
   text-align: center;
+}
+.adults-icon.icon-minus,
+.adults-icon.icon-plus,
+.kids-icon.icon-minus,
+.kids-icon.icon-plus {
+  display: none;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  font-family: "symbols-sedona";
+  color: #a9a9a9;
+  background-color: #f2f2f2;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+}
+.adults-icon.icon-minus {
+  top: 185px;
+  left: 167px;
+}
+.adults-icon.icon-plus {
+  top: 185px;
+  left: 242px;
+}
+.kids-icon.icon-minus{
+  top: 185px;
+  left: 389px;
+}
+.kids-icon.icon-plus {
+  top: 185px;
+  left: 463px;
+}
+.adults-icon.icon-minus.on,
+.adults-icon.icon-plus.on,
+.kids-icon.icon-minus.on,
+.kids-icon.icon-plus.on {
+  display: block;
 }
 .search-form-button {
   width: 456px;
@@ -360,4 +388,21 @@ width: 20.5%;
   width: 113px;
   height: 39px;
   background-image: url("../img/bg-html-academy.png");
+}
+
+/* Код для валидации формы */
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.search-form-error {
+  animation: shake 0.6s;
 }
