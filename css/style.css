@@ -247,6 +247,7 @@ h4.booking {
 .modal-search-form input[type="date"] {
   margin-bottom: 30px;
   padding-left: 15px;
+  padding-right: 40px;
   width: 344px;
   height: 36px;
   font-family: "PT Sans";
@@ -262,6 +263,7 @@ h4.booking {
   color: #000;
   text-align: center;
 }
+.modal-search-form .icon-calendar,
 .adults-icon.icon-minus,
 .adults-icon.icon-plus,
 .kids-icon.icon-minus,
@@ -278,6 +280,14 @@ h4.booking {
   cursor: pointer;
   z-index: 2;
 }
+.icon-calendar.date-in {
+  top: 53px;
+  left: 475px;
+}
+.icon-calendar.date-out {
+  top: 119px;
+  left: 475px;
+}
 .adults-icon.icon-minus {
   top: 185px;
   left: 167px;
@@ -292,7 +302,7 @@ h4.booking {
 }
 .kids-icon.icon-plus {
   top: 185px;
-  left: 463px;
+  left: 474px;
 }
 .search-form-button {
   box-sizing: border-box;
