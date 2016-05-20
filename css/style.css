@@ -276,6 +276,7 @@ h4.booking {
   text-align: center;
   line-height: 36px;
   cursor: pointer;
+  z-index: 2;
 }
 .adults-icon.icon-minus {
   top: 185px;
