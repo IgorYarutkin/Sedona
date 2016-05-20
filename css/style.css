@@ -40,12 +40,10 @@ body {
 .menu-main-item:nth-child(3) {
   position: relative;
 }
-.menu-main-item:nth-child(3)::before {
+.menu-main-item img {
   position: absolute;
-  content: "";
   top: 0px;
   left: 22%;
-  background-image: url("../img/bg-blazon.png");
   width: 138px;
   height: 70px;
   z-index: 2;
@@ -207,7 +205,7 @@ h4.booking {
   top: 205px;
   left: 25%;
   width: 566px;
-  height: 478px;
+  /*height: 478px;*/
   background-color: #fff;
   z-index: 2;
 }
@@ -219,15 +217,21 @@ h4.booking {
   color: #fff;
   background-color: #766357;
 }
-.search-fields-wrapper {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 53px 56px 0px;
+.search-form-header a {
+  text-decoration: none;
+  color: #fff;
 }
-.search-fields-wrapper label {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+.modal-search-form {
+  position: relative;
+  display: none;
+  flex-wrap: wrap;
+  padding: 53px 56px 54px;
+  height: 277px;
+}
+.modal-search-form.on {
+  display: flex;
+}
+.modal-search-form label {
   box-sizing: border-box;
   width: 110px;
   line-height: 36px;
@@ -235,14 +239,12 @@ h4.booking {
 .kids {
   padding-left: 20px;
 }
-.search-fields-wrapper input {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+.modal-search-form input {
   box-sizing: border-box;
   background-color: #f2f2f2;
   border: none;
 }
-.search-fields-wrapper input[type="date"] {
+.modal-search-form input[type="date"] {
   margin-bottom: 30px;
   padding-left: 15px;
   width: 344px;
@@ -251,7 +253,7 @@ h4.booking {
   font-size: 14px;
   color: #000;
 }
-.search-fields-wrapper input[type="number"] {
+.modal-search-form input[type="number"] {
   margin-bottom: 54px;
   width: 112px;
   height: 36px;
@@ -264,7 +266,7 @@ h4.booking {
 .adults-icon.icon-plus,
 .kids-icon.icon-minus,
 .kids-icon.icon-plus {
-  display: none;
+  display: block;
   position: absolute;
   width: 36px;
   height: 36px;
@@ -291,21 +293,22 @@ h4.booking {
   top: 185px;
   left: 463px;
 }
-.adults-icon.icon-minus.on,
-.adults-icon.icon-plus.on,
-.kids-icon.icon-minus.on,
-.kids-icon.icon-plus.on {
-  display: block;
-}
 .search-form-button {
+  box-sizing: border-box;
   width: 456px;
   height: 55px;
   font-size: 21px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   line-height: 55px;
   color: #fff;
   background-color: #81b3d2;
+  border: none;
+}
+.search-form-button:focus {
+  border: 1px solid #288ece;
+  line-height: 53px;
 }
 .map {
   height: 590px;

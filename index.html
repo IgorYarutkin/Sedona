@@ -18,7 +18,7 @@
         <ul class="menu-main">
           <li class="menu-main-item"><a href="information.html">Информация</a></li>
           <li class="menu-main-item"><a href="photo.html">Фото и видео</a></li>
-          <li class="menu-main-item"></li>
+          <li class="menu-main-item"><img src="img/bg-blazon.png" alt="Логотип" width="138" height="70px"></li>
           <li class="menu-main-item"><a href="map.html">Карта штата</a></li>
           <li class="menu-main-item"><a href="hotels.html">Гостиницы</a></li>
         </ul>
@@ -89,22 +89,22 @@
         <p class="booking-paragraph">Укажите предполагаемые даты поездки,
           <br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <div class="search-form">
-          <div class="search-form-header">Поиск гостиницы в Седоне</div>
+          <div class="search-form-header"><a href="search.html">Поиск гостиницы в Седоне</a></div>
           <form action="https://echo.htmlacademy.ru" method="post">
-            <div class="search-fields-wrapper">
+          <div class="modal-search-form">
               <label class="date-in" for="date-in">Дата заезда:</label>
-              <input id="date-in" class="icon-calendar" type="date" name="date-in" value="24 апреля 2016" reguired>
+              <input id="date-in" class="icon-calendar" type="date" name="date-in" tabindex="1" value="24 апреля 2016" reguired>
               <label class="date-out" for="date-out">Дата выезда:</label>
-              <input id="date-out" class="icon-calendar" type="date" name="date-out" value="4 июля 2016" reguired>
+              <input id="date-out" class="icon-calendar" type="date" name="date-out" tabindex="2" value="4 июля 2016" reguired>
               <label class="adults" for="adults">Взрослые:</label>
-              <div class="adults-icon icon-minus on"></div>
-              <div class="adults-icon icon-plus on"></div> <!-- 0xe801 -->
-              <input id="adults" type="number" name="adults" min="1" value="1" reguired>
+              <div class="adults-icon icon-minus"></div>
+              <div class="adults-icon icon-plus"></div> <!-- 0xe801 -->
+              <input id="adults" type="number" name="adults" min="1" tabindex="3" value="1" reguired>
               <label class="kids" for="kids">Дети:</label>
-              <div class="kids-icon icon-minus on"></div>
-              <div class="kids-icon icon-plus on"></div>
-              <input id="kids" type="number" name="kids" min="0" value="0" reguired>
-              <a class="search-form-button" href="search.html">Найти</a>
+              <div class="kids-icon icon-minus"></div>
+              <div class="kids-icon icon-plus"></div>
+              <input id="kids" type="number" name="kids" min="0" tabindex="4" value="0" reguired>
+              <button class="search-form-button" type="button" name="search-form-button" tabindex="0">Найти</button>
             </div>
           </form>
         </div>
@@ -121,7 +121,7 @@
       <div class="copyright">Website by</div>
     </footer>
   </div>
-  
+
   <script src="js/script.js"></script>
 
 </body>
