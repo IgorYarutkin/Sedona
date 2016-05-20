@@ -1,4 +1,9 @@
 (function() {
+  /*  Доработать:
+  *   1. Вывод подсказок возле неправильно заполненных полей
+  *   2. Изменить валидацию полей даты (заменить проверку заполнения поля на проверку заполнения датой)
+  *   3. Добавить плагин jQuerry для вызова календаря
+  */
 
   // объявление переменных
   var searchHeader = document.querySelector('.search-form-header a');
@@ -10,6 +15,7 @@
   var buttonKidsPlus = document.querySelector('.kids-icon.icon-plus');
   var adultsInput = document.getElementById('adults');
   var kidsInput = document.getElementById('kids');
+  var shockContainer = document.querySelector('.search-form');
   var searchFormContainer = document.querySelector('.modal-search-form');
   var searchForm = document.querySelector('.search-form form');
   var searchFormSubmitButton = document.querySelector('.search-form-button');
@@ -46,7 +52,7 @@
   *
   */
   var searchFormSubmit = function() {
-    searchFormContainer.classList.remove('search-form-error');
+    searchFormOff();
     searchForm.submit();
   };
 
@@ -54,6 +60,8 @@
   *
   */
   var validateSearchForm = function() {
+    shockContainer.classList.remove("modal-search-form-error");
+    shockContainer.offsetWidth = shockContainer.offsetWidth;
     if (!dateInInput.value) {
       console.log('Заполните дату заезда');
       dateInInput.focus();
@@ -70,7 +78,7 @@
       searchFormSubmit();
       return;
     }
-
+    shockContainer.classList.add('modal-search-form-error');
   };
 
   // функция обработчика кнопки на отправку формы
@@ -115,6 +123,7 @@
 */
   var searchFormOff = function() {
     searchFormContainer.classList.remove('on');
+    shockContainer.classList.remove('search-form-error');
     searchFormContainer.removeEventListener('click', formEvent);
   };
 
