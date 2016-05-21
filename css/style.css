@@ -247,7 +247,7 @@ h4.booking {
 .modal-search-form input[type="date"] {
   margin-bottom: 30px;
   padding-left: 15px;
-  padding-right: 40px;
+  padding-right: 55px;
   width: 344px;
   height: 36px;
   font-family: "PT Sans";
@@ -280,13 +280,19 @@ h4.booking {
   cursor: pointer;
   z-index: 2;
 }
+.modal-search-form .icon-calendar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 47px;
+  width: 54px;
+  left: 439px;
+}
 .icon-calendar.date-in {
   top: 53px;
-  left: 475px;
 }
 .icon-calendar.date-out {
   top: 119px;
-  left: 475px;
 }
 .adults-icon.icon-minus {
   top: 185px;
