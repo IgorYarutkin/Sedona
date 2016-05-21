@@ -255,7 +255,12 @@ h4.booking {
   color: #000;
 }
 .modal-search-form input[type="date"]:hover {
+  background-color: #ebebeb;
   border: none;
+}
+.modal-search-form input[type="date"]:active {
+  background-color: #fff;
+  border: 2px solid #e5e5e5;
 }
 .modal-search-form input[type="number"] {
   margin-bottom: 54px;
