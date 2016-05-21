@@ -247,12 +247,15 @@ h4.booking {
 .modal-search-form input[type="date"] {
   margin-bottom: 30px;
   padding-left: 15px;
-  padding-right: 55px;
+  padding-right: 40px;
   width: 344px;
   height: 36px;
   font-family: "PT Sans";
   font-size: 14px;
   color: #000;
+}
+.modal-search-form input[type="date"]:hover {
+  border: none;
 }
 .modal-search-form input[type="number"] {
   margin-bottom: 54px;
