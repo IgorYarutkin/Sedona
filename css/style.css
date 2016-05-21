@@ -254,11 +254,13 @@ h4.booking {
   font-size: 14px;
   color: #000;
 }
-.modal-search-form input[type="date"]:hover {
+.modal-search-form input[type="date"]:hover,
+.modal-search-form input[type="date"]:hover + .icon-calendar {
   background-color: #ebebeb;
   border: none;
 }
-.modal-search-form input[type="date"]:active {
+.modal-search-form input[type="date"]:active,
+.modal-search-form input[type="date"]:active + .icon-calendar {
   background-color: #fff;
   border: 2px solid #e5e5e5;
 }
@@ -292,8 +294,8 @@ h4.booking {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 47px;
-  width: 54px;
+  padding-left: 40px;
+  width: 70px;
   left: 439px;
 }
 .icon-calendar.date-in {
